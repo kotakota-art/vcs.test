@@ -1,0 +1,290 @@
+/* ベース */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* 背景色 */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 800px; /* フォームの最大幅 */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォームの行全体 */
+.form-group {
+    display: flex; /* Flexboxで行を左右に分割 */
+    border-bottom: 1px solid #ddd;
+}
+
+/* ラベルエリア (左側) */
+.form-label {
+    width: 30%; /* ラベルエリアの幅 */
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    background-color: #e9e9f3; /* ラベル部分の背景色 */
+    position: relative; /* 必須/任意ラベルの配置用 */
+}
+
+/* 必須マーク（赤色で「必須」と表示） */
+.required-label::before {
+    content: "必須";
+    background-color: #c00; /* 赤色 */
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 4px;
+    margin-right: 8px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+/* 任意マーク（「任意」と表示） */
+.optional-label::before {
+    content: "任意";
+    background-color: #888; /* 灰色 */
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 4px;
+    margin-right: 8px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+.optional-label.form-label::before {
+    content: "任意";
+    background-color: #6c757d; /* 注意書きに合わせた青っぽいグレー */
+}
+/* 注意書きの会社名（任意）に合わせた修正 */
+.optional-label {
+    background-color: #e9e9f3; /* 通常のラベル背景色 */
+    color: #333;
+}
+.optional-label::before {
+    content: "任意";
+    background-color: #888; /* 灰色 */
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 4px;
+    margin-right: 8px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+/* 画像の「注意 会社名」の左側ラベル色を調整 */
+.optional-label {
+    background-color: #d8e6f1; /* 画像の「注意」エリアっぽい少し青みがかった色 */
+}
+
+/* 入力エリア (右側) */
+.form-input-group {
+    width: 70%; /* 入力エリアの幅 */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* テキスト入力フィールド */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* テキストエリア */
+textarea {
+    resize: vertical;
+}
+
+/* チェックボックスの行の調整 */
+.checkbox-row {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap; /* テキストが途中で改行されないように */
+}
+
+/* メッセージ本文エリアの調整 */
+.message-area {
+    display: block; /* 1列にする */
+    border-bottom: 1px solid #ddd;
+}
+
+.message-area .form-label {
+    width: 100%;
+    background-color: #e9e9f3;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+
+.message-area .form-input-group {
+    width: 100%;
+    display: block;
+    padding: 16px 20px;
+}
+
+.message-area textarea {
+    min-height: 150px;
+}
+
+.message-area .form-input-group::before {
+    content: "お問い合わせ内容をご記入ください";
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+/* 送信ボタン */
+.submit-button-container {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.submit-button-container button {
+    background-color: #c00; /* 画像のボタンに合わせた濃い赤 */
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #900; /* 立体感を出すためのシャドウ */
+}
+
+.submit-button-container button:hover {
+    background-color: #d00;
+}
+
+#submit-button {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(180deg,#f6a94a 0%,#e88f2c 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 rgba(184,101,28,0.18), 0 8px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.3px;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+/* ホバー / フォーカス */
+#submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 rgba(160,90,20,0.18), 0 12px 26px rgba(0,0,0,0.10);
+    background: linear-gradient(180deg,#ffb96a 0%,#ef9036 100%);
+}
+
+#submit-button:focus {
+    outline: 3px solid rgba(240,160,64,0.18);
+    outline-offset: 3px;
+}
+
+/* 押下時 */
+#submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 0 rgba(140,70,18,0.16);
+}
+
+/* 無効状態 */
+#submit-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* contact-form のコンテナ調整 */
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+}
+
+/* 入力要素のフォーカス状態 */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.checkbox-row input:focus {
+    outline: 3px solid rgba(240,160,64,0.12);
+    outline-offset: 2px;
+    border-color: #e6a45a;
+}
+
+/* 小さい画面向け調整 */
+@media (max-width: 820px) {
+    /* ラベルは上に並べる */
+    .required-label, .optional-label {
+        width: 100%;
+        margin: 0 0 8px 0;
+        text-align: left;
+        padding: 8px 6px;
+    }
+
+    .form-group, .form-group-checkbox, .form-group-textarea {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 0;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group-textarea textarea,
+    .checkbox-options {
+        width: 100%;
+    }
+
+    .checkbox-options {
+        gap: 12px;
+        padding-top: 6px;
+        flex-wrap: wrap;
+    }
+
+    #submit-button {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+
+    .contact-form {
+        padding: 12px;
+    }
+}
+
+/* 印刷時の余計な要素を抑える */
+@media print {
+    .hero-section, .center-button, .button, .gallery-grid, .support-us, .footer-section { display: none; }
+    .contact-form { box-shadow: none; border: 1px solid #ddd; }
+}

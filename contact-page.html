@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>お問い合わせ — 岡宏治アートブログ</title>
+  <link rel="stylesheet" href="https://koujioka.sakura.ne.jp/form_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-section" style="background-image: url('https://koujioka.sakura.ne.jp/images/main_background.jpg'); background-size: cover; background-position: center; padding: 60px 0; color: #fff;">
+    <div class="hero-content" style="background-color: rgba(0,0,0,0.35); display: inline-block; padding: 16px 24px; border-radius: 8px;">
+      <a href="index.html" style="text-decoration:none;color:inherit;font-weight:700;color:#fff">岡宏治 アートブログ</a>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding:24px">
+      <h1 style="text-align:center;margin-bottom:16px">お問い合わせフォーム</h1>
+
+      <form id="contactForm" class="contact-form" action="/send_inquiry.php" method="post" novalidate>
+        <div class="form-group form-group-checkbox">
+          <div class="required-label">ご相談内容</div>
+          <div class="checkbox-options" role="group" aria-label="ご相談内容">
+            <label><input type="checkbox" name="inquiry_type[]" value="ご相談"> ご相談</label>
+            <label><input type="checkbox" name="inquiry_type[]" value="お見積もり"> お見積もり</label>
+            <label><input type="checkbox" name="inquiry_type[]" value="お問い合わせ"> お問い合わせ</label>
+            <label><input type="checkbox" name="inquiry_type[]" value="その他"> その他</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="form-label required-label">お名前</label>
+          <div class="form-input-group">
+            <input id="name" name="name" type="text" placeholder="例：あなたのお名前" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label required-label">メールアドレス</label>
+          <div class="form-input-group">
+            <input id="email" name="email" type="email" placeholder="例：xxx@xxx.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="company" class="form-label optional-label">会社名</label>
+          <div class="form-input-group">
+            <input id="company" name="company" type="text" placeholder="例：〇〇株式会社">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="zip" class="form-label required-label">郵便番号</label>
+          <div class="form-input-group">
+            <input id="zip" name="zip" type="text" placeholder="例：123-4567" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pref" class="form-label required-label">都道府県</label>
+          <div class="form-input-group">
+            <input id="pref" name="pref" type="text" placeholder="例：東京都" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address" class="form-label required-label">ご住所</label>
+          <div class="form-input-group">
+            <input id="address" name="address" type="text" placeholder="例：中央区銀座１２３４５" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tel" class="form-label required-label">お電話番号</label>
+          <div class="form-input-group">
+            <input id="tel" name="tel" type="tel" placeholder="例：03-1234-5678" required>
+          </div>
+        </div>
+
+        <div class="form-group form-group-textarea">
+          <label for="message" class="form-label required-label">メッセージ本文</label>
+          <div class="form-input-group">
+            <textarea id="message" name="message" rows="8" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+          </div>
+        </div>
+
+        <div class="submit-button-container">
+          <button id="submit-button" type="submit">送信する</button>
+        </div>
+
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:20px 0;color:#666">
+    © 2025 岡宏治アートブログ
+  </footer>
+
+  <script src="contact-form.js"></script>
+</body>
+</html>

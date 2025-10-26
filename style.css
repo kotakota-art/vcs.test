@@ -1,0 +1,3171 @@
+/* 基本のリセットとフォント設定 */
+body {
+    margin: 0;
+    font-family: 'Noto Serif JP', "Hiragino Mincho ProN", "Yu Mincho", serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Sans JP', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー - トップページのメインビジュアル */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* ビューポートの高さに合わせて全画面表示 */
+    background-image: url('images/main_background.jpg'); /* トップページの背景画像 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字を見やすく */
+}
+
+.hero-content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3); /* テキスト背景を半透明に */
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 3.0em; /* 前より少し小さくする例 */
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* ベースフォントを入れ替え（トップ画以外） */
+/* もともと body がゴシック（Noto Sans）だったので → 明朝（Noto Serif）に変更 */
+body {
+    margin: 0;
+    font-family: 'Noto Serif JP', "Hiragino Mincho ProN", "Yu Mincho", serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* 見出しはゴシックに変更（もともと明朝だったものを入れ替え） */
+h1, h2, h3 {
+    font-family: 'Noto Sans JP', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* トップ画像内の見出し（hero）は例外：元の明朝のままにする */
+.hero-content h1 {
+    font-family: 'Noto Serif JP', "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.hero-buttons .button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.7); /* ボタンの背景を半透明に */
+    color: #333;
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+}
+
+/* 各セクションの共通スタイル */
+.section {
+    padding: 60px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:nth-child(even) {
+    background-color: #f0f0f0; /* 交互の背景色 */
+}
+
+/* テキストセクション */
+.intro-text p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1em;
+}
+
+/* サービス内容セクション（デスクトップ/Web 用） */
+.service-content {
+    background-color: #ecd828; /* 背景色を #ecd828 に変更 */
+    color: #2b1f15;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.service-content p,
+.service-content li {
+    color: #2b1f15; /* テキストもこげ茶に */
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-content li {
+    padding: 8px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.service-content p,
+.service-content li {
+    color: #4b2e19; /* 暗いこげ茶 */
+}
+
+.service-content .checkmark {
+    color: #F0C987; /* ゴールド系のアクセント（そのまま） */
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #6a6a6a;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+/* 絵画教室セクション（背景をより黒に近い濃紺に変更） */
+.art-class-info {
+    background-color: #00012e; /* 黒に近い青寄りの濃紺に変更 */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.art-class-info h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #ffffff; /* 見出しを白に */
+}
+
+.art-class-info p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff; /* 段落を白に */
+}
+
+.art-class-info .icon {
+    margin-right: 5px;
+    font-size: 1.2em;
+    color: #ffffff; /* アイコンも白に */
+}
+
+.art-class-info .note {
+    font-size: 0.9em;
+    color: #ffffff; /* 補足テキストも白に */
+}
+
+/* 絵画教室セクションの文字を確実に白にする（上書き用） */
+.art-class-info,
+.art-class-info * {
+    color: #ffffff !important;
+}
+
+/* 絵画教室のイメージ画像を80%に縮小 */
+.art-class-info .section-image,
+.art-class-info .section-image img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform-origin: center;
+}
+
+/* ギャラリーセクション */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* レスポンシブなグリッド */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* 固定の高さ */
+    object-fit: cover; /* 画像の比率を保ちつつボックスに収める */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); /* ホバーで少し拡大 */
+}
+
+/* ニュースセクション */
+.news-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.news-item h3 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.news-item p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.news-item .read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item .read-more:hover {
+    text-decoration: underline;
+}
+
+/* サポートセクション (背景画像あり) */
+.support-us {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.support-us .button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.support-us .button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* support-us の背景画像を gallery_sample4 に変更し、オーバーレイで文字を見やすくする */
+.support-us {
+    background-image: url('images/gallery_sample4.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* ::before 用 */
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    padding: 80px 0;
+}
+
+/* 画像を暗くするオーバーレイ（文字を読みやすく） */
+.support-us::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5); /* 50% 透過に変更 */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* セクション内コンテンツをオーバーレイの上に表示 */
+.support-us > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* フッター */
+.footer-section {
+    background-color: #222; /* 例：濃い背景 */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+/* ソーシャルアイコン全体のコンテナ（仮定） */
+.social-icons {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    gap: 20px; /* アイコン間の間隔 */
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* 個々のアイコンのスタイル */
+.social-icons a i {
+    color: #fff; /* アイコンの色を白に */
+    font-size: 30px; /* アイコンのサイズを大きく */
+    transition: color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* アイコンにマウスカーソルが乗ったときの変化 */
+.social-icons a i:hover {
+    color: #E1306C; /* Instagramのブランドカラー */
+}
+
+/* もし、現在のアイコンが画像（<img>タグ）の場合、そのスタイルを削除・調整する */
+/* 例: img.camera-icon { display: none; } */
+/* コメントアウトして非表示指定を解除（display:none を削除） */
+/* img.camera-icon { display: none; } */
+  
+/* フォーム全体のレイアウト調整 */
+.detailed-contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 各入力行のグループ化 */
+.form-group, .form-group-checkbox, .form-group-textarea {
+    display: flex;
+    align-items: center; /* 縦方向の中央揃え */
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* 区切り線 */
+}
+
+/* メッセージ本文（テキストエリア）用のグループ */
+.form-group-textarea {
+    align-items: flex-start; /* 上端揃え */
+}
+
+/* 必須/任意のラベル部分 (左側) */
+.required-label, .optional-label {
+    width: 30%; /* 左側カラムの幅 */
+    min-width: 120px;
+    padding-right: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-weight: bold; /* ラベルを太字に */
+    color: #333;
+}
+
+/* 必須を示すデザイン (画像の赤い背景に白文字を再現) */
+.required-label {
+    background-color: #A94442; /* 赤っぽい色 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    text-align: center;
+    width: auto; /* コンテンツに合わせて幅を調整 */
+    margin-right: 15px; /* 右側の入力欄との間隔 */
+}
+
+/* 任意を示すデザイン */
+.optional-label {
+    background-color: #555; /* 濃い灰色 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    text-align: center;
+    width: auto;
+    margin-right: 15px;
+}
+
+/* 入力欄（Input/Select）のスタイル */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 70%; /* 右側カラムの幅 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* テキストエリア（メッセージ本文）のスタイル */
+.form-group-textarea textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-height: 120px;
+    resize: vertical; /* 縦方向のみリサイズ可能 */
+    font-size: 14px;
+}
+
+/* チェックボックス部分のレイアウト */
+.form-group-checkbox {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.form-group-checkbox .required-label {
+    /* ここでは左側のラベルとして機能させるため、幅は広めに設定 */
+    width: 30%; 
+    margin-right: 0;
+}
+
+.checkbox-options {
+    width: 70%;
+    display: flex;
+    gap: 15px; /* チェックボックス間の間隔 */
+    align-items: center;
+}
+
+.checkbox-options label {
+    font-weight: normal;
+    font-size: 14px;
+    white-space: nowrap; /* 折り返しを防ぐ */
+}
+
+/* 送信ボタンの調整 */
+#submit-button {
+    width: 200px; /* 送信ボタンの幅を調整 */
+    margin: 20px auto 10px auto; /* 中央寄せ */
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: #F0A040; /* 画像に合わせたオレンジっぽい色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #D68F39;
+}
+
+/* ===========================
+   フッター（濃紺に更新）
+   =========================== */
+.site-footer {
+    background-color: #02060d; /* より黒に近い濃紺 */
+    color: #f5f5f5;
+    text-align: center;
+    padding: 36px 20px;
+    font-family: 'Noto Sans JP', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.site-footer .footer-title {
+    font-size: 20px;
+    margin: 0 0 16px 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.site-footer .footer-icons a i {
+    color: #ffffff;
+    font-size: 20px;
+    transition: opacity 0.25s ease, transform 0.18s ease;
+}
+
+.site-footer .copyright {
+    font-size: 13px;
+    color: #cfcfcf;
+    margin: 8px 0 0 0;
+}
+
+.site-footer .footer-icons a:hover i {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* スマホ時の余白調整 */
+@media (max-width:720px) {
+    .site-footer {
+        padding: 28px 16px;
+    }
+    .site-footer .footer-icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* スマホで一番下のアイコンを中央揃えにする */
+    .site-footer .footer-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* 縦並びにして中央寄せ */
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 0 auto 8px auto;
+    }
+
+    .site-footer .footer-icons a {
+        margin: 0; /* 各アイコンを中央に揃える */
+    }
+
+    .site-footer .footer-icons a:last-child {
+        /* さらに確実に一番下のアイコンが中央に来るように調整 */
+        margin-top: 6px;
+    }
+}
+
+/* スマホでもデスクトップに近い見た目に調整（既存のモバイルスタイルを上書き） */
+@media (max-width:720px) {
+
+    /* ヒーロー高さをデスクトップに近づけ、見出しを大きめに */
+    .hero-section {
+        height: 60vh; /* 画面いっぱい過ぎないように調整 */
+        padding: 24px 0;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.05;
+        margin-bottom: 14px;
+    }
+
+    /* セクション余白をデスクトップに近づける */
+    .section {
+        padding: 40px 12px;
+    }
+    .container {
+        padding: 18px;
+    }
+
+    /* サービス・絵画教室の余白・文字サイズを確保 */
+    .service-content,
+    .art-class-info {
+        padding: 28px 16px;
+        border-radius: 6px;
+    }
+    .service-content p,
+    .service-content li,
+    .art-class_info p,
+    .art-class_info h3 {
+        font-size: 1rem;
+    }
+
+    /* フォーム：ラベルと入力を横並びにしてデスクトップに近い構成を維持 */
+    .form-group, .form-group-checkbox, .form-group-textarea {
+        flex-direction: row;       /* 横並びを維持 */
+        align-items: center;
+        gap: 8px;
+    }
+    .required-label, .optional-label {
+        width: 35%;
+        min-width: 90px;
+        padding-right: 12px;
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 14px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group-textarea textarea,
+    .checkbox-options {
+        width: 65%;
+    }
+    .form-group-textarea {
+        align-items: flex-start;
+    }
+    .form-group-textarea textarea {
+        min-height: 100px;
+    }
+
+    /* ギャラリーは2列表示を保ち、デスクトップ風の見た目に */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* ニュースカードのパディング・文字サイズ維持 */
+    .news-item {
+        padding: 18px;
+    }
+    .news-item h3 {
+        font-size: 1.05rem;
+    }
+
+    /* フッター：アイコンを横並びで中央揃え（デスクトップに近い見た目） */
+    .site-footer .footer-icons {
+        width: auto;
+        display: flex;
+        flex-direction: row; /* 横並びに戻す */
+        justify-content: center;
+        gap: 18px;
+        margin: 0 auto 10px auto;
+    }
+    .site-footer .footer-icons a {
+        width: auto;
+        height: auto;
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    /* ボタン類を十分なサイズに */
+    .button, #submit-button {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* 画像はコンテナ内で縮小しレイアウトを保つ */
+    img, .section-image img, .gallery-grid img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* スマートフォンのみ：サービス内容の背景を薄いクリームに変更 */
+@media (max-width:720px) {
+    .service-content {
+        background-color: #FBF6E6; /* 薄いクリーム色 */
+        color: #2b1f15;           /* こげ茶で可読性を確保 */
+    }
+
+    .service-content p,
+    .service-content li {
+        color: #2b1f15; /* テキストもこげ茶に */
+    }
+}
+
+/* スマホのみ: support-us の背景を images/gallery_sample4 に差し替え、透過オーバーレイで文字を見やすくする */
+@media (max-width:720px) {
+    .support-us {
+        background-image: url('images/gallery_sample4.jpg'); /* 拡張子が異なる場合は適宜変更してください */
+        background-size: cover;
+        background-position: center;
+        position: relative; /* ::before のために相対位置指定 */
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+
+    .support-us::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5) !important; /* スマホでも50%透過に統一 */
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .support-us > * {
+        position: relative;
+        z-index: 1; /* テキスト等をオーバーレイの上に表示 */
+    }
+}
+
+/* スマートフォン向け：サービス/絵画教室をより青寄りの濃紺に上書き */
+@media (max-width:720px) {
+    .service-content,
+    .art-class_info {
+        background-color: #00012e !important; /* スマホ用：指定の濃紺 */
+        color: #f5f5f5 !important;
+    }
+
+    .service-content p,
+    .service-content li,
+    .art-class-info p,
+    .art-class_info h3 {
+        color: #f5f5f5 !important;
+    }
+
+    /* フッターもスマホで青寄りに（必要なら調整） */
+    .site-footer {
+        background-color: #00012e !important;
+    }
+
+    /* support-us のオーバーレイを青寄りに調整（文字の視認性維持） */
+    .support-us::before {
+        background: rgba(0,1,46,0.56) !important; /* #00012e を半透明で使用 */
+    }
+}
+
+/* スマホ専用：サービス内容を淡いクリーム色に強制上書き */
+@media (max-width:720px) {
+    .service-content {
+        background-color: #FBF6E6 !important; /* 薄いクリーム */
+        color: #2b1f15 !important;             /* こげ茶で可読性確保 */
+    }
+
+    .service-content p,
+    .service-content li {
+        color: #2b1f15 !important; /* テキストもこげ茶に */
+    }
+}
+
+/* Lightbox（全画面表示） */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+}
+.lightbox[aria-hidden="false"] { display: flex; }
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+}
+.lightbox-content {
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+    z-index: 1201;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.lightbox-content img {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+.lightbox-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1202;
+}
+.lightbox-close:hover { opacity: 0.95; }
+
+/* モバイル調整 */
+@media (max-width:720px) {
+    .lightbox-content img { max-width: 92vw; max-height: 82vh; }
+    .lightbox-close { top: 8px; right: 8px; }
+}
+
+/* Fullscreen gallery lightbox */
+.gallery-fullscreen-overlay{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.9);
+  z-index:9999;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .26s ease;
+}
+.gallery-fullscreen-overlay.open{opacity:1;pointer-events:auto}
+.gallery-fullscreen-inner{max-width:98vw;max-height:98vh;position:relative;display:flex;align-items:center;justify-content:center}
+.gallery-fullscreen-inner img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  border-radius:6px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  transform-origin:center center;
+  transition:transform .26s ease;
+  cursor:zoom-out;
+}
+.gallery-fullscreen-close{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  padding:8px;
+}
+.gallery-fullscreen-caption{
+  position:absolute;
+  left:16px;
+  bottom:18px;
+  right:16px;
+  color:rgba(255,255,255,0.9);
+  font-size:0.95rem;
+  text-align:center;
+  pointer-events:none;
+}
+@media (max-width:720px){
+  .gallery-fullscreen-close{top:12px;right:12px;font-size:24px}
+  .gallery-fullscreen-caption{font-size:0.9rem;bottom:12px}
+}
+
+/* Contact form - 洗練された2カラムレイアウト */
+.contact-section{padding:60px 0;background:transparent}
+.contact-section .container{max-width:900px}
+
+/* フォーム全体 */
+.contact-form{
+  background:var(--panel);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(15,15,15,0.06);
+  margin-top:18px;
+}
+
+/* fieldset（チェックボックス群） */
+.form-checkboxes{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+  border:0;
+  padding:6px 0 12px 0;
+}
+.form-checkboxes label{
+  background:rgba(0,0,0,0.04);
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:0.95rem;
+}
+
+/* グリッド定義：ラベル（左）/入力（右） */
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+}
+
+/* 個別行 */
+.form-group{
+  display:grid;
+  grid-template-columns: 30% 1fr;
+  align-items:center;
+  gap:12px;
+  padding:6px 0;
+}
+.form-group.full{grid-column:1/-1}
+
+/* ラベル側 */
+.label-left{
+  font-weight:700;
+  color:var(--text);
+  text-align:right;
+  padding-right:12px;
+  font-size:0.95rem;
+}
+.label-left .required{color:#c74b4b;margin-left:6px}
+
+/* 入力側 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:8px;
+  font-size:1rem;
+  background:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+  transition:box-shadow .14s ease, border-color .12s ease;
+}
+.label-right textarea{min-height:140px;resize:vertical}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus{
+  outline:none;
+  border-color:rgba(14,104,192,0.85);
+  box-shadow:0 8px 30px rgba(14,104,192,0.06);
+}
+
+/* ボタン群 */
+.form-actions{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:18px}
+.btn.primary{background:var(--accent);color:#fff;padding:12px 22px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
+.btn.primary:hover{background:var(--accent-dark)}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:10px 18px;border-radius:8px;color:var(--text)}
+
+/* ステータスメッセージ */
+.form-status{margin-top:12px;text-align:center;color:var(--muted);font-size:0.98rem}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+   
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Contact Form - 新しい2カラムレイアウト */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* フォーム全体 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* チェックボックス群 */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border: 0;
+    padding: 0;
+}
+
+/* 2カラムグリッド */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* 個別行 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ラベル */
+.label-left {
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* 入力欄 */
+.label-right input[type="text"],
+.label-right input[type="email"],
+.label-right input[type="tel"],
+.label-right textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: box-shadow .14s ease, border-color .12s ease;
+}
+
+.label-right textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* フォーカス時 */
+.label-right input:focus,
+.label-right textarea:focus {
+    outline: none;
+    border-color: rgba(14, 104, 192, 0.85);
+    box-shadow: 0 8px 30px rgba(14, 104, 192, 0.06);
+}
+
+/* ボタン群 */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: var(--text);
+    flex: 1 1 200px; /* ボタンの幅を柔軟に調整 */
+}
+
+/* ステータスメッセージ */
+.form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+/* レスポンシブ：スマホではラベル上、入力下に積む */
+@media (max-width:720px){
+  .form-group{grid-template-columns:1fr;align-items:flex-start}
+  .label-left{text-align:left;padding-right:0;margin-bottom:6px}
+  .form-checkboxes{gap:8px}
+  .contact-form{padding:18px}
+  .form-actions{flex-direction:column}
+  .btn.primary,.btn.ghost{width:100%}
+}
+
+/* お問い合わせフォームのスタイル調整 */
+#contactForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#contactForm .form-row {
+    margin-bottom: 16px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="tel"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contactForm .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contactForm .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    background-color: #0056b3;
+}
+
+#contactForm .form-status {
+    margin-top: 12px;
+    text-align: center;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+/* チェックボックスのスタイル */
+.form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-checkboxes label {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkboxes input[type="checkbox"] {
+    accent-color: #007bff; /* チェックボックスの色 */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* スマートフォン向けスタイル調整 */
+@media (max-width: 720px) {
+    #contactForm {
+        padding: 16px;
+    }
+
+    #contactForm h2 {
+        font-size: 1.5em;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #contactForm .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* チェックボックスのサイズを調整 */
+    .form-checkboxes input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
